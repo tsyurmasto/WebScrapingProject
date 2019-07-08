@@ -1,14 +1,14 @@
-Latent Support Measure Machines for Bag-of-Words Data Classification,25.0
-Latent Bayesian melding for integrating individual and population models,22.0
-Scan Order in Gibbs Sampling: Models in Which it Matters and Bounds on How Much,9.0
-Exponential Family PCA for Belief Compression in POMDPs,152.0
-A Method for the Design of Stable Lateral Inhibition Networks that is Robust in the Presence of Circuit Parasitics,4.0
-Monte Carlo POMDPs,311.0
-Policy Gradient Methods for Reinforcement Learning with Function Approximation,2170.0
-Stabilizing Value Function Approximation with the BFBP Algorithm,5.0
-Direct value-approximation for factored MDPs,97.0
-Mean Field Residual Networks: On the Edge of Chaos,27.0
-Multi-view Matrix Factorization for Linear Dynamical System Estimation,Related articles
+Latent Support Measure Machines for Bag-of-Words Data Classification,25
+Latent Bayesian melding for integrating individual and population models,22
+Scan Order in Gibbs Sampling: Models in Which it Matters and Bounds on How Much,9
+Exponential Family PCA for Belief Compression in POMDPs,152
+A Method for the Design of Stable Lateral Inhibition Networks that is Robust in the Presence of Circuit Parasitics,4
+Monte Carlo POMDPs,311
+Policy Gradient Methods for Reinforcement Learning with Function Approximation,2170
+Stabilizing Value Function Approximation with the BFBP Algorithm,5
+Direct value-approximation for factored MDPs,97
+Mean Field Residual Networks: On the Edge of Chaos,27
+Multi-view Matrix Factorization for Linear Dynamical System Estimation,0
 Learning Safe Policies with Expert Guidance,3
 GroupReduce: Block-Wise Low-Rank Approximation for Neural Language Model Shrinking,4
 The Price of Fair PCA: One Extra dimension,8
@@ -17,16 +17,16 @@ Multiple Instance Learning for Efficient Sequential Data Classification on Resou
 Sparse PCA from Sparse Linear Regression,2290
 Computationally and statistically efficient learning of causal Bayes nets using path queries,1
 Point process latent variable models of larval zebrafish behavior,1
-Contrastive Learning from Pairwise Measurements,Related articles
+Contrastive Learning from Pairwise Measurements,0
 Topkapi: Parallel and Fast Sketches for Finding Top-K Frequent Elements,1
-Removing Hidden Confounding by Experimental Grounding,Related articles
+Removing Hidden Confounding by Experimental Grounding,0
 Semidefinite relaxations for certifying robustness to adversarial examples,22
 MixLasso: Generalized Mixed Regression via Convex Atomic-Norm Regularization,1
 Smoothed Analysis of Discrete Tensor Decomposition and Assemblies of Neurons,3
 Domain Adaptation by Using Causal Inference to Predict Invariant Conditional Distributions,5
 Multi-value Rule Sets for Interpretable Classification with Feature-Efficient Representations,2
 Differentially Private Change-Point Detection,2
-Support Recovery for Orthogonal Matching Pursuit: Upper and Lower bounds,Related articles
+Support Recovery for Orthogonal Matching Pursuit: Upper and Lower bounds,0
 Fast and Effective Robustness Certification,20
 Bias and Generalization in Deep Generative Models: An Empirical Study,4
 Learning Temporal Point Processes via Reinforcement Learning,
@@ -35,60 +35,60 @@ Decentralize and Randomize: Faster Algorithm for Wasserstein Barycenters,13
 "With Friends Like These, Who Needs Adversaries?",5
 Forward Modeling for Partial Observation Strategy Games - A StarCraft Defogger,3
 DropBlock: A regularization method for convolutional networks,30
-Autoconj: Recognizing and Exploiting Conjugacy Without a Domain-Specific Language,
-Analysis of Krylov Subspace Solutions of  Regularized Non-Convex Quadratic Problems,
-Mean Field for the Stochastic Blockmodel: Optimization Landscape and Convergence Issues,
-Robust Subspace Approximation in a Stream,
-Thermostat-assisted continuously-tempered Hamiltonian Monte Carlo for Bayesian learning,
-Benefits of over-parameterization with EM,
-Learning Beam Search Policies via Imitation Learning,
-Data-Driven Clustering via Parameterized Lloyd's Families,
-Understanding Regularized Spectral Clustering via Graph Conductance,
-Fully Neural Network Based Speech Recognition on Mobile and Embedded Devices,
-Connecting Optimization and Regularization Paths,
-Sketching Method for Large Scale Combinatorial Inference,
-Regret Bounds for Online Portfolio Selection with a Cardinality Constraint,
-Improved Network Robustness with Adversary Critic,
-Fast deep reinforcement learning using online adjustments from the past,
-Streamlining Variational Inference for Constraint Satisfaction Problems,
-Learning a Warping Distance from Unlabeled Time Series Using Sequence Autoencoders,
-Complex Gated Recurrent Neural Networks,
-Bayesian Structure Learning by Recursive Bootstrap,
-The Sparse Manifold Transform,
-Deep Generative Models with Learnable Knowledge Constraints,
-Diversity-Driven Exploration Strategy for Deep Reinforcement Learning,
-Regret bounds for meta Bayesian optimization with an unknown Gaussian process prior,
-Discretely Relaxing Continuous Variables for tractable Variational Inference,
-Using Trusted Data to Train Deep Networks on Labels Corrupted by Severe Noise,
-Temporal alignment and latent Gaussian process factor inference in population spike trains,
-Bounded-Loss Private Prediction Markets,
-Learning Abstract Options,
-Mesh-TensorFlow: Deep Learning for Supercomputers,
-Convex Elicitation of Continuous Properties,
-Context-aware Synthesis and Placement of Object Instances,
-3D Steerable CNNs: Learning Rotationally Equivariant Features in Volumetric Data,
-Gaussian Process Prior Variational Autoencoders,
-Adversarial Risk and Robustness: General Definitions and Implications for the Uniform Distribution,
-Unsupervised Image-to-Image Translation Using Domain-Specific Variational Information Bound,
-Learning and Inference in Hilbert Space with Quantum Graphical Models,
-Lifted Weighted Mini-Bucket,
-Learning to Solve SMT Formulas,
-PCA of high dimensional random walks with comparison to neural network training,
-Improving Simple Models with Confidence Profiles,
-Robust Learning of Fixed-Structure Bayesian Networks,
-Robustness of conditional GANs to noisy labels,
-Predictive Approximate Bayesian Computation via Saddle Points,
-Learning to Share and Hide Intentions using Information Regularization,
-Generalizing Point Embeddings using the Wasserstein Space of Elliptical Distributions,
-Nonparametric Density Estimation under Adversarial Losses,
-Glow: Generative Flow with Invertible 1x1 Convolutions,
-Total stochastic gradient algorithms and applications in reinforcement learning,
-Learning with SGD and Random Features,
-Backpropagation with Callbacks: Foundations for Efficient and Expressive Differentiable Programming,
-Learning To Learn Around A Common Mean,
-Human-in-the-Loop Interpretability Prior,
-Synaptic Strength For Convolutional Neural Network,
-A Spectral View of Adversarially Robust Features,
+Autoconj: Recognizing and Exploiting Conjugacy Without a Domain-Specific Language,2
+Analysis of Krylov Subspace Solutions of  Regularized Non-Convex Quadratic Problems,7
+Mean Field for the Stochastic Blockmodel: Optimization Landscape and Convergence Issues,0
+Robust Subspace Approximation in a Stream,0
+Thermostat-assisted continuously-tempered Hamiltonian Monte Carlo for Bayesian learning,0
+Benefits of over-parameterization with EM,4
+Learning Beam Search Policies via Imitation Learning,3
+Data-Driven Clustering via Parameterized Lloyd's Families,3
+Understanding Regularized Spectral Clustering via Graph Conductance,4
+Fully Neural Network Based Speech Recognition on Mobile and Embedded Devices,4
+Connecting Optimization and Regularization Paths,6
+Sketching Method for Large Scale Combinatorial Inference,0
+Regret Bounds for Online Portfolio Selection with a Cardinality Constraint,0
+Improved Network Robustness with Adversary Critic,0
+Fast deep reinforcement learning using online adjustments from the past,1
+Streamlining Variational Inference for Constraint Satisfaction Problems,1
+Learning a Warping Distance from Unlabeled Time Series Using Sequence Autoencoders,0
+Complex Gated Recurrent Neural Networks,3
+Bayesian Structure Learning by Recursive Bootstrap,2
+The Sparse Manifold Transform,4
+Deep Generative Models with Learnable Knowledge Constraints,16
+Diversity-Driven Exploration Strategy for Deep Reinforcement Learning,3
+Regret bounds for meta Bayesian optimization with an unknown Gaussian process prior,3
+Discretely Relaxing Continuous Variables for tractable Variational Inference,0
+Using Trusted Data to Train Deep Networks on Labels Corrupted by Severe Noise,28
+Temporal alignment and latent Gaussian process factor inference in population spike trains,0
+Bounded-Loss Private Prediction Markets,0
+Learning Abstract Options,0
+Mesh-TensorFlow: Deep Learning for Supercomputers,9
+Convex Elicitation of Continuous Properties,1
+Context-aware Synthesis and Placement of Object Instances,8
+3D Steerable CNNs: Learning Rotationally Equivariant Features in Volumetric Data,21
+Gaussian Process Prior Variational Autoencoders,4
+Adversarial Risk and Robustness: General Definitions and Implications for the Uniform Distribution,9
+Unsupervised Image-to-Image Translation Using Domain-Specific Variational Information Bound,6
+Learning and Inference in Hilbert Space with Quantum Graphical Models,1
+Lifted Weighted Mini-Bucket,0
+Learning to Solve SMT Formulas,0
+PCA of high dimensional random walks with comparison to neural network training,3
+Improving Simple Models with Confidence Profiles,4
+Robust Learning of Fixed-Structure Bayesian Networks,14
+Robustness of conditional GANs to noisy labels,4
+Predictive Approximate Bayesian Computation via Saddle Points,0
+Learning to Share and Hide Intentions using Information Regularization,7
+Generalizing Point Embeddings using the Wasserstein Space of Elliptical Distributions,13
+Nonparametric Density Estimation under Adversarial Losses,6
+Glow: Generative Flow with Invertible 1x1 Convolutions,156
+Total stochastic gradient algorithms and applications in reinforcement learning,2
+Learning with SGD and Random Features,8
+Backpropagation with Callbacks: Foundations for Efficient and Expressive Differentiable Programming,4
+Learning To Learn Around A Common Mean,3
+Human-in-the-Loop Interpretability Prior,8
+Synaptic Strength For Convolutional Neural Network,2
+A Spectral View of Adversarially Robust Features,1
 Bayesian Nonparametric Spectral Estimation,
 Clebsch–Gordan Nets: a Fully Fourier Space Spherical Convolutional Neural Network,
 A Simple Cache Model for Image Recognition,

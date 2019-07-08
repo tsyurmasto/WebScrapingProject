@@ -8,43 +8,39 @@ class Articles(object):
 	# initialize object of class
 	def __init__(self,filename='articles.csv'):
 		self.__df = pd.read_csv(filename)
-	# function returns sample of n rows in dataframe
+	# number of rows in dataframe
+	def nrows(self): return(self.__df.shape[0])
+	# function returns a random sample of n rows in dataframe
 	def sample(self,n):
 		return(self.__df.sample(n))
+	# column to series
+	def col_to_series(self,col): return(self.__df[col])
 	# column to list
-	def col_to_list(self,col): return(self.__df[col].tolist())		
+	def col_to_list(self,col): return(self.__df[col].tolist())			
 	# fills 'Abstract Missing' in column 'Abstract' by empty string 
 	def fill_missing_data(self):
 		self.__df['Abstract'] = self.__df['Abstract'].apply(lambda x: '' if x=='Abstract Missing' else x)
-	# convert title and abstract to lower cases	
-	def to_lower(self):
-		self.__df['Abstract'] = self.__df['Abstract'].str.lower()
-		self.__df['Title'] = self.__df['Title'].str.lower()
-	def filter(self):
-		# remove punctuation from abstract
-		self.__df['Abstract'] = self.__df['Abstract'].apply(lambda x: re.sub('[^\w\s]', '', x))
-		# remove stopwords from abstract
+	# convert column to lower case
+	def to_lower(self,col):
+		self.__df.loc[:,col] = self.__df.loc[:,col].str.lower()
+	# remove punctuation from column
+	def remove_punctuation(self,col):	
+		self.__df.loc[:,col] = self.__df.loc[:,col].apply(lambda x: re.sub('[^\w\s]', '', x))
+	# remove stopwords from col
+	def remove_stopwords(self,col):
 		stop = stopwords.words('english')
-		self.__df['Abstract'] = self.__df['Abstract'].apply(lambda x: " ".join(x for x in x.split() if x not in stop))		
+		self.__df[col] = self.__df[col].apply(lambda x: " ".join(x for x in x.split() if x not in stop))
 	# lemmatize sentence consisting of words seperated by spaces
 	def lemmatize_sentence(self,sentence): 
 		lemtzr = WordNetLemmatizer()
 		lst = list(map(lambda x: lemtzr.lemmatize(x),sentence.split()))		
 		return(' '.join(lst))
-	# perform lemmatization on titles and abstracts	of type pandas.Series
-	def lemmatize(self):			
-		#self.__df['Abstract'] = self.__df['Abstract'].apply(lambda x: lemmatize_sentence(x))
-		self.__df['Title'] = self.__df['Title'].apply(lambda x: self.lemmatize_sentence(x))
-	def preprocess(self):
-		# fill missing data
-		self.fill_missing_data()
-		# convert abstract and title to lower case
-		self.to_lower()
-		# filter
-		self.filter()
-	# number of rows in dataframe
-	def nrows(self): return(self.__df.shape[0])
-	# extracts all authors appeared in articles into a 	list
+	# perform lemmatization
+	def lemmatize(self,col):					
+		self.__df[col] = self.__df[col].apply(lambda x: self.lemmatize_sentence(x))
+	# N-gram function
+	def ngrams(self,lst,n): return(list( map(lambda x: ' '.join(list(x)), zip(*[lst[i:] for i in range(n)])) ))	
+	# extracts all authors that appeared in articles into a list
 	def get_set_authors(self):
 		# convert series data into list
 		lst = self.__df['Authors'].tolist()
@@ -69,3 +65,26 @@ class Articles(object):
 		# most freq authors
 		authors_freq_sorted = sorted(authors_freq.items(), key = lambda x: x[1], reverse = True)
 		return(authors_freq_sorted)
+	def title_freq(self,year=None,ngrams_lst=[1,2,3]):
+		# filter by year
+		# lst - list of all titles
+		if (year == None):
+			lst = self.col_to_list('Title')
+		else:
+			df = self.__df.loc[:,['Title','Year']]
+			df.loc[:,'Year'] = df['Year'].apply(int)
+			lst = df[df['Year'] == int(year)]['Title'].tolist()					
+		lst_all = []
+		# lst_all - list of ngrams titles
+		for n in ngrams_lst:
+			lst_all += list(map(lambda x: self.ngrams(x.split(),n), lst))
+		# flatten list
+		lst_all = [item for sublist in lst_all for item in sublist]
+		lst_all_set = set(lst_all)
+		# create a dictionary of words
+		word_freq = {item:0 for item in lst_all_set}
+		# calculate frequencies of authors
+		for item in lst_all: word_freq[item] += 1
+		# most freq words
+		words_freq_sorted = sorted(word_freq.items(), key = lambda x: x[1], reverse = True)
+		return(words_freq_sorted)

@@ -12,7 +12,8 @@ class SeleniumWrapper(object):
 		self.__filepath_chrome = filepath_chrome
    	# configure driver function
 	def configure_driver(self,ip_address):
-		options = webdriver.ChromeOptions()
+		options = webdriver.ChromeOptions() # add options to chrome such as hide mode, change user settings, etc.
+		options.add_argument('headless') # hide chrome mode while scraping
 		proxy = Proxy()
 		proxy.proxyType = ProxyType.MANUAL
 		proxy.autodetect = False
