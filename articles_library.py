@@ -65,6 +65,7 @@ class Articles(object):
 		# most freq authors
 		authors_freq_sorted = sorted(authors_freq.items(), key = lambda x: x[1], reverse = True)
 		return(authors_freq_sorted)
+	# function returns a sorted tuple of ngrams together with frequencies, where ngrams are specified by ngrams_lst
 	def title_freq(self,year=None,ngrams_lst=[1,2,3]):
 		# filter by year
 		# lst - list of all titles
@@ -88,3 +89,45 @@ class Articles(object):
 		# most freq words
 		words_freq_sorted = sorted(word_freq.items(), key = lambda x: x[1], reverse = True)
 		return(words_freq_sorted)
+	# function returns a sorted tuple of ngrams together with frequencies, where ngrams are specified by ngrams_lst
+	def abstract_freq(self,year=None,ngrams_lst=[1,2,3]):
+		# filter by year
+		# lst - list of all titles
+		if (year == None):
+			lst = self.col_to_series('Abstract').dropna().tolist()
+		else:
+			df = self.__df.loc[:,['Abstract','Year']]
+			df.dropna(inplace=True)
+			df.loc[:,'Year'] = df['Year'].apply(int)
+			lst = df[df['Year'] == int(year)]['Abstract'].tolist()					
+		lst_all = []
+		# lst_all - list of ngrams titles
+		for n in ngrams_lst:
+			lst_all += list(map(lambda x: self.ngrams(x.split(),n), lst))
+		# flatten list
+		lst_all = [item for sublist in lst_all for item in sublist]
+		lst_all_set = set(lst_all)
+		# create a dictionary of words
+		word_freq = {item:0 for item in lst_all_set}
+		# calculate frequencies of authors
+		for item in lst_all: word_freq[item] += 1
+		# most freq words
+		words_freq_sorted = sorted(word_freq.items(), key = lambda x: x[1], reverse = True)
+		return(words_freq_sorted)
+	# generate word cloud
+	def title_word_cloud(self,year=None,ngrams_lst=[1,2,3]):
+		# filter by year
+		# lst - list of all titles
+		if (year == None):
+			lst = self.col_to_list('Title')
+		else:
+			df = self.__df.loc[:,['Title','Year']]
+			df.loc[:,'Year'] = df['Year'].apply(int)
+			lst = df[df['Year'] == int(year)]['Title'].tolist()					
+		lst_all = []
+		# lst_all - list of ngrams titles
+		for n in ngrams_lst:
+			lst_all += list(map(lambda x: self.ngrams(x.split(),n), lst))
+		# flatten list
+		lst_all = [item for sublist in lst_all for item in sublist]
+		return(lst_all)
