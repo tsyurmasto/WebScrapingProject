@@ -40,6 +40,17 @@ class Articles(object):
 		self.__df[col] = self.__df[col].apply(lambda x: self.lemmatize_sentence(x))
 	# N-gram function
 	def ngrams(self,lst,n): return(list( map(lambda x: ' '.join(list(x)), zip(*[lst[i:] for i in range(n)])) ))	
+	# search articles by keywords
+	# input: keywords in string format
+	# output: dataframe with subset of articles
+	def search_by_keywords(self,keywords,inTitle=True,inAbstract=False):
+		mask_inTitle = list(map(lambda x: keywords in x,self.__df['Title'].tolist()))
+		if inAbstract == False:
+			mask = mask_inTitle
+		else:
+			mask_inAbstract = list(map(lambda x: keywords in x,self.__df['Title'].tolist()))
+			mask = [x or y for a, b in zip(mask_inTitle,mask_inAbstract)]
+		return(self.__df[mask])
 	# extracts all authors that appeared in articles into a list
 	def get_set_authors(self):
 		# convert series data into list
